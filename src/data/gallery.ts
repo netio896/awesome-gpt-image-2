@@ -21,6 +21,7 @@ export const categories: Category[] = [
   { id: 'product', name: '商品电商', icon: '🛍️' },
   { id: 'brand', name: '品牌标志', icon: '⭐' },
   { id: 'architecture', name: '建筑空间', icon: '🏗️' },
+  { id: 'map', name: '建筑地图', icon: '🗺️' },
   { id: 'photo', name: '摄影写实', icon: '📷' },
   { id: 'illustration', name: '插画艺术', icon: '🎭' },
 ];
@@ -199,5 +200,153 @@ UI叠加层：
 
 输出：生成一张 9:16 竖版、高级、干净、强视觉冲击的 Apple 风自然科普海报。`,
     tags: ['科普', '海报', 'Apple风格']
+  },
+  // ========== 建筑地图类模板 ==========
+  {
+    id: '13',
+    title: '手绘水彩住宅空间导览图',
+    category: '建筑地图',
+    description: '基于蓝图生成温暖的手绘风格住宅导览图，适合客户汇报和户型介绍',
+    promptTemplate: `基于上传的住宅平面蓝图，生成一张手绘水彩风格的住宅空间导览图。
+保留原始房间关系和整体布局，包括 [Kitchen、Bedroom1、Living Room、Bedroom2、Kitchen Bedroom、Bathroom/Toilet，以及 1st Floor Bedroom1 和 Bathroom]。
+
+使用柔和水彩纸纹理、手绘线条、浅色功能分区。
+添加房间名称标注、简单家具符号和生活化小插画。
+画面风格温暖、清晰、亲切，适合客户理解住宅空间。
+不要生成施工图，不要改变房间数量和位置。`,
+    tags: ['水彩', '手绘', '住宅', '导览图', '客户汇报']
+  },
+  {
+    id: '14',
+    title: '房屋功能分区手绘图',
+    category: '建筑地图',
+    description: '将住宅蓝图转化为功能分区图，清晰展示生活区、卧室区、湿区、服务区',
+    promptTemplate: `基于上传的住宅蓝图，生成一张手绘水彩风格的功能分区图。
+将平面图分为：
+- Living / Public Zone（客厅/公共区）
+- Bedroom / Private Zone（卧室/私密区）
+- Kitchen / Service Zone（厨房/服务区）
+- Bathroom / Wet Zone（浴室/湿区）
+- 1st Floor Zone（一楼层）
+
+使用柔和透明色块覆盖不同区域，保留墙体、门窗和房间关系。
+添加手写风格英文标签、小图标、动线箭头和简短注释。
+整体像建筑师手绘说明图，清楚、温暖、适合客户汇报。`,
+    tags: ['水彩', '手绘', '功能分区', '建筑说明图']
+  },
+  {
+    id: '15',
+    title: '住宅生活方式地图',
+    category: '建筑地图',
+    description: '展示每个房间的生活场景，而非施工细节',
+    promptTemplate: `Create a hand-drawn watercolor lifestyle map based on the uploaded residential floor plan.
+Preserve the original layout and room relationships.
+
+Show each room as a warm living scene:
+- Kitchen: cooking scene
+- Living Room: relaxing scene
+- Bedroom1 and Bedroom2: sleeping and storage
+- Bathroom/Toilet: simple use
+- 1st Floor Bedroom1: quiet private room
+
+Add soft watercolor textures, hand-drawn furniture, small lifestyle icons, room labels, circulation arrows, and gentle notes.
+The image should feel like a friendly illustrated home guide, not a technical construction drawing.`,
+    tags: ['水彩', '手绘', '生活方式', '家居场景', '英文']
+  },
+  {
+    id: '16',
+    title: '房屋销售/出租展示地图',
+    category: '建筑地图',
+    description: '适合 Facebook、微信、客户介绍页的房产展示图',
+    promptTemplate: `Generate a hand-drawn watercolor real estate presentation map based on the uploaded house blueprint.
+Keep the original room arrangement and proportions.
+
+Present the house as a warm illustrated home layout with:
+- Labeled rooms
+- Simple furniture
+- Soft color zoning
+- Walking paths
+- Small lifestyle details
+
+Highlight Kitchen, Living Room, Bedroom1, Bedroom2, Bathroom, and 1st Floor Bedroom1.
+Use a clean watercolor paper texture, elegant handwritten labels, and a friendly residential marketing style.
+Suitable for rental or sale presentation.
+Do not modify the floor plan.`,
+    tags: ['水彩', '房产', '销售', '出租', '展示', '英文']
+  },
+  {
+    id: '17',
+    title: '民宿/Airbnb风格介绍图',
+    category: '建筑地图',
+    description: '为客人快速理解房屋布局的民宿风格地图',
+    promptTemplate: `Create a cozy hand-drawn watercolor guesthouse floor map based on the uploaded blueprint.
+Preserve the floor plan layout.
+
+Show:
+- Room names, beds, seating area
+- Kitchen area
+- Bathroom/toilet
+- Windows, doors, circulation paths
+
+Add small hospitality icons such as bed, sofa, coffee cup, kitchenware, shower, towel, and luggage.
+Use soft warm colors, watercolor paper texture, friendly handwritten labels, and a travel-map style presentation.
+The image should help guests quickly understand the house layout.`,
+    tags: ['水彩', '民宿', 'Airbnb', '地图', '英文']
+  },
+  {
+    id: '18',
+    title: '手绘工程协调草图',
+    category: '建筑地图',
+    description: '比蓝图更容易给业主和工人解释的工程协调图',
+    promptTemplate: `Convert the uploaded residential blueprint into a hand-drawn architectural coordination sketch.
+Keep the original room layout, wall positions, doors, windows, and room labels.
+
+Use black ink sketch lines with light watercolor highlights.
+Mark Kitchen, Bedroom1, Living Room, Bedroom2, Bathroom/Toilet, and 1st Floor rooms.
+Add simple arrows for circulation, highlight wet areas.
+Include short notes such as "verify on site" and "reference only".
+
+The style should look like an architect's hand sketch over a floor plan, clear and practical.`,
+    tags: ['手绘', '工程', '协调', '草图', '英文']
+  },
+  {
+    id: '19',
+    title: '改造建议手绘图',
+    category: '建筑地图',
+    description: '用于讨论改造方案的概念图，清晰展示改进建议',
+    promptTemplate: `Based on the uploaded house blueprint, create a hand-drawn watercolor renovation idea map.
+Keep the existing footprint visible.
+
+Use soft overlays to show suggested improvements for:
+- Circulation（动线优化）
+- Furniture placement（家具布置）
+- Wet area clarity（湿区明确）
+- Room function（房间功能）
+
+Add handwritten notes, arrows, and small icons.
+Present it as a concept discussion drawing, not a final construction plan.
+Do not make structural claims.
+All dimensions and wall conditions are TBC.`,
+    tags: ['水彩', '手绘', '改造', '翻新', '概念', '英文']
+  },
+  {
+    id: '20',
+    title: '建筑空间导览地图版式',
+    category: '建筑地图',
+    description: '类似城市手绘地图的建筑空间导览图',
+    promptTemplate: `Create a hand-drawn watercolor architectural space map based on the uploaded residential floor plan, inspired by illustrated city travel maps.
+
+Show the house layout as a friendly illustrated guide with:
+- Room zones（功能分区）
+- Furniture icons（家具图标）
+- Small scene illustrations（小场景插画）
+- Handwritten labels（手写标签）
+- Building landmarks（建筑地标）
+- Walking paths（行走路径）
+- Functional annotations（功能注释）
+
+Style: hand-drawn watercolor, city map aesthetic, warm colors, paper texture.
+The image should look like an architectural illustration guide, not a technical blueprint.`,
+    tags: ['水彩', '手绘', '导览', '地图', '版式', '英文']
   },
 ];
