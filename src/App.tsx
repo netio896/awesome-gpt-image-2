@@ -23,7 +23,7 @@ export default function App() {
   }, [searchQuery, activeCategory]);
 
   return (
-    <div className="min-h-screen bg-bg-primary">
+    <div className="min-h-screen bg-[#0f0f0f] text-white">
       <Header searchQuery={searchQuery} onSearchChange={setSearchQuery} />
       <CategoryBar 
         categories={categories} 
@@ -31,9 +31,6 @@ export default function App() {
         onChange={setActiveCategory} 
       />
       <main className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="mb-4 text-sm text-text-secondary">
-          共 {filteredItems.length} 个结果
-        </div>
         <GalleryGrid items={filteredItems} onLightbox={setLightboxItem} />
       </main>
       {lightboxItem && (
