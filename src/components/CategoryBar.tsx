@@ -15,18 +15,19 @@ export default function CategoryBar({ categories, active, onChange }: CategoryBa
       transition={{ delay: 0.1 }}
       className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-3 border-b border-[#222]"
     >
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-3">
         {categories.map((cat) => (
           <button
             key={cat.id}
             onClick={() => onChange(cat.name)}
-            className={`text-sm transition-colors ${
+            className={`px-3 py-1.5 text-sm rounded-lg transition-all flex items-center gap-1.5 ${
               active === cat.name
-                ? 'text-white font-medium'
-                : 'text-gray-500 hover:text-gray-300'
+                ? 'bg-[#2563eb] text-white'
+                : 'bg-[#1a1a1a] text-gray-400 hover:text-white hover:bg-[#2a2a2a]'
             }`}
           >
-            {cat.name}
+            <span>{cat.icon}</span>
+            <span>{cat.name}</span>
           </button>
         ))}
       </div>
